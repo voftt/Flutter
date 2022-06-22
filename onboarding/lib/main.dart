@@ -27,6 +27,7 @@ class Mypage extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
               'Main Screen',
@@ -36,7 +37,12 @@ class Mypage extends StatelessWidget {
             ),
             ),
             ElevatedButton(
-                onPressed: (){},
+                onPressed: (){
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) =>
+                    const OnBoardingPage()),
+                  );
+                },
                 child: const Text('Go to onboarding screen'),
             ),
           ],
